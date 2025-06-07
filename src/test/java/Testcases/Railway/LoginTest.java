@@ -42,7 +42,7 @@ public class LoginTest {
 
         LoginPage loginPage = homePage.gotoLoginPage();
 
-        String actualMsg = loginPage.login("", Constant.PASSWORD).getLblWelcomeMessage();
+        Str actualMsg = loginPage.login(Constant.USERNAME, Constant.PASSWORD).getLblWelcomeMessage();
         String expectedMsg = "Welcome " + Constant.USERNAME;
 
         Assert.assertEquals(actualMsg, expectedMsg, "Welcome message is not displayed as expected");
